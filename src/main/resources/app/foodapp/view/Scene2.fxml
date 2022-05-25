@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="750.0" maxWidth="435.0" minHeight="750.0" minWidth="435.0" prefHeight="750.0" prefWidth="435.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.foodapp.controller.FoodAppController">
+    <children>
+        <ImageView fitHeight="438.0" fitWidth="400.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Image/image12.gif" />
+         </image>
+      </ImageView>
+        <TextField fx:id="RechercheIngredients" alignment="CENTER" cache="true" layoutX="17.0" layoutY="13.0" prefHeight="31.0" prefWidth="237.0" promptText="Entrer vos ingredients" style="-fx-border-radius: 20; -fx-background-color: gris; -fx-border-color: black; -fx-text-color: black;">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </TextField>
+          <Button alignment="CENTER" contentDisplay="CENTER" layoutY="133.0" mnemonicParsing="false" onAction="#switchToScene1" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;" text="←" textAlignment="CENTER" textOverrun="CLIP">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+        <Button fx:id="ChercherIngredients" layoutX="219.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#SetGraphicContent" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: white;" text="🝯">
+         <font>
+            <Font size="15.0" />
+         </font>
+        </Button>
+        <ScrollPane fx:id="scrollPaneMain" hbarPolicy="NEVER" layoutY="181.0" prefHeight="350.0" prefWidth="435.0" style="-fx-border-color: transparent;" vbarPolicy="NEVER">
+            <content>
+                <GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="803.0" prefWidth="432.0" style="-fx-background-radius: 15;" styleClass="white-background">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <AnchorPane maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" style="-fx-background-color: transparent;">
+                            <children>
+                        <AnchorPane prefHeight="40.0" prefWidth="167.0">
+                           <children>
+                              <Text fill="#9a1818" layoutX="18.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recette 1 :" wrappingWidth="130.7294921875">
+                                 <font>
+                                    <Font name="Ani" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                                <ImageView fx:id="AffichageImageIngredients1" fitHeight="101.0" fitWidth="117.0" layoutX="34.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: 20px;" />
+                        <Label fx:id="AffichageIngredients1" alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="154.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="178.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+                            </children>
+                        </AnchorPane>
+                  <AnchorPane maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.columnIndex="1">
+                     <children>
+                        <ImageView fx:id="AffichageImageIngredients2" fitHeight="101.0" fitWidth="117.0" layoutX="25.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="AffichageIngredients2" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="178.0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+                        <AnchorPane prefHeight="40.0" prefWidth="167.0">
+                           <children>
+                              <Text fill="#9a1818" layoutX="18.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recette 2 :" wrappingWidth="130.7294921875">
+                                 <font>
+                                    <Font name="Ani" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="AffichageImageIngredients3" fitHeight="101.0" fitWidth="117.0" layoutX="25.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="AffichageIngredients3" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="178.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+                        <AnchorPane prefHeight="40.0" prefWidth="167.0">
+                           <children>
+                              <Text fill="#9a1818" layoutX="18.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recette 3 :" wrappingWidth="130.7294921875">
+                                 <font>
+                                    <Font name="Ani" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="AffichageImageIngredients4" fitHeight="101.0" fitWidth="117.0" layoutX="25.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="AffichageIngredients4" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="178.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+                        <AnchorPane prefHeight="40.0" prefWidth="167.0">
+                           <children>
+                              <Text fill="#9a1818" layoutX="18.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recette 4 :" wrappingWidth="130.7294921875">
+                                 <font>
+                                    <Font name="Ani" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.rowIndex="2">
+                     <children>
+                        <ImageView fx:id="AffichageImageIngredients5" fitHeight="101.0" fitWidth="117.0" layoutX="25.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="AffichageIngredients5" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="178.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+                        <AnchorPane prefHeight="40.0" prefWidth="167.0">
+                           <children>
+                              <Text fill="#9a1818" layoutX="18.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recette 5:" wrappingWidth="130.7294921875">
+                                 <font>
+                                    <Font name="Ani" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <ImageView fx:id="AffichageImageIngredients6" fitHeight="101.0" fitWidth="117.0" layoutX="25.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="AffichageIngredients6" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="178.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+                        <AnchorPane prefHeight="40.0" prefWidth="167.0">
+                           <children>
+                              <Text fill="#9a1818" layoutX="18.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recette 6 :" wrappingWidth="130.7294921875">
+                                 <font>
+                                    <Font name="Ani" size="15.0" />
+                                 </font>
+                              </Text>
+                              <AnchorPane prefHeight="40.0" prefWidth="167.0">
+                                 <children>
+                                    <Text layoutX="18.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recette 7 :" wrappingWidth="130.7294921875">
+                                       <font>
+                                          <Font name="Ani" size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="208.0" layoutY="410.0" maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.rowIndex="3">
+                     <children>
+                        <ImageView fx:id="AffichageImageIngredients7" fitHeight="101.0" fitWidth="117.0" layoutX="25.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="AffichageIngredients7" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="163.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="178.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+                        <AnchorPane prefHeight="40.0" prefWidth="167.0">
+                           <children>
+                              <Text fill="#9a1818" layoutX="18.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recette 7:" wrappingWidth="130.7294921875">
+                                 <font>
+                                    <Font name="Ani" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="610.0" maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <ImageView fx:id="AffichageImageIngredients8" fitHeight="101.0" fitWidth="117.0" layoutX="25.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="AffichageIngredients8" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="178.0" style="-fx-background-color: transparent;" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+                        <AnchorPane prefHeight="40.0" prefWidth="167.0">
+                           <children>
+                              <Text fill="#9a1818" layoutX="18.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recette 8:" wrappingWidth="130.7294921875">
+                                 <font>
+                                    <Font name="Ani" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                    </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+                </GridPane>
+            </content>
+        </ScrollPane>
+      <ChoiceBox fx:id="listeOfFavorite" layoutX="334.0" layoutY="17.0" prefHeight="26.0" prefWidth="8.0" style="-fx-border-radius: 20; -fx-border-color: black; -fx-background-color: transparent;" />
+      <Button fx:id="addFavoris" depthTest="ENABLE" layoutX="254.0" layoutY="13.0" mnemonicParsing="false" onMousePressed="#add_favorite" prefHeight="30.0" prefWidth="35.0" style="-fx-background-color: transparent; l: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;" text="★" textFill="#fac605">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteFavoris" alignment="CENTER" contentDisplay="CENTER" layoutX="289.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#delete_favoris" prefHeight="30.0" prefWidth="35.0" style="-fx-background-color: transparent; l: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;" text="✕" textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateFavoris" layoutX="384.0" layoutY="56.0" mnemonicParsing="false" onMouseClicked="#updateFavoris" prefHeight="30.0" prefWidth="35.0" style="-fx-background-color: transparent; l: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;" text="🗘">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="118.0" layoutY="56.0" prefHeight="70.0" prefWidth="203.0">
+         <children>
+            <Text cache="true" layoutX="7.0" layoutY="79.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="R" wrappingWidth="54.15625">
+               <cursor>
+                  <Cursor fx:constant="NW_RESIZE" />
+               </cursor>
+               <font>
+                  <Font name="Ani" size="64.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="0.6952380952380952" endY="0.8285714285714285" startX="0.02380952380952378" startY="0.7">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9333333373069763" green="0.10980392247438431" blue="0.03529411926865578" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007407407407407408">
+                           <color>
+                              <Color red="0.9333333373069763" green="0.10980392247438431" blue="0.03529411926865578" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.1">
+                           <color>
+                              <Color red="1.0" green="0.10000000149011612" blue="0.10000000149011612" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.658823549747467" green="0.4470588266849518" blue="0.15294118225574493" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text layoutX="43.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ecettes " wrappingWidth="91.98307228088379">
+               <font>
+                  <Font name="Ani" size="24.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="0.9857142857142858" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9333333373069763" green="0.10980392247438431" blue="0.03529411926865578" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007407407407407408">
+                           <color>
+                              <Color red="0.9333333373069763" green="0.10980392247438431" blue="0.03529411926865578" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.658823549747467" green="0.4470588266849518" blue="0.15294118225574493" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text layoutX="123.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&amp;">
+               <font>
+                  <Font name="DejaVu Sans ExtraLight" size="30.0" />
+               </font>
+               <fill>
+                  <LinearGradient cycleMethod="REPEAT" endX="0.6190476190476191" endY="1.0" startX="0.4904761904761905" startY="0.4047619047619048">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.95686274766922" green="0.4000000059604645" blue="0.10588235408067703" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007407407407407408">
+                           <color>
+                              <Color red="0.9333333373069763" green="0.10980392247438431" blue="0.03529411926865578" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.658823549747467" green="0.4470588266849518" blue="0.15294118225574493" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text layoutX="146.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M">
+               <font>
+                  <Font name="Ani" size="31.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startY="0.7238095238095238">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.95686274766922" green="0.4000000059604645" blue="0.10588235408067703" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007407407407407408">
+                           <color>
+                              <Color red="0.9333333373069763" green="0.10980392247438431" blue="0.03529411926865578" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.658823549747467" green="0.4470588266849518" blue="0.15294118225574493" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text layoutX="174.0" layoutY="73.0" stroke="#992020" strokeType="OUTSIDE" strokeWidth="0.0" text="Oi">
+               <font>
+                  <Font name="Ani" size="21.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="0.5571428571428572" endY="0.9380952380952381" startX="0.16666666666666666" startY="0.26666666666666666">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.95686274766922" green="0.4000000059604645" blue="0.10588235408067703" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007407407407407408">
+                           <color>
+                              <Color red="0.9333333373069763" green="0.10980392247438431" blue="0.03529411926865578" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9962962962962963">
+                           <color>
+                              <Color red="0.658823549747467" green="0.4470588266849518" blue="0.15294118225574493" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.658823549747467" green="0.4470588266849518" blue="0.15294118225574493" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="20.0" layoutY="530.0" prefHeight="10.0" prefWidth="400.0" />
+      <ScrollPane fx:id="scrollPaneMain1" hbarPolicy="NEVER" layoutX="-4.0" layoutY="538.0" prefHeight="212.0" prefWidth="439.0" style="-fx-border-color: transparent;" vbarPolicy="NEVER">
+         <content>
+            <GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="803.0" prefWidth="432.0" style="-fx-background-radius: 15;" styleClass="white-background">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <AnchorPane maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <Label fx:id="Ingredients1" layoutX="6.0" layoutY="40.0" prefHeight="105.0" prefWidth="180.0" />
+                        <Text fill="#9a1818" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédients manquants pour la recette 1 :" wrappingWidth="130.7294921875">
+                           <font>
+                              <Font name="Ani" size="15.0" />
+                           </font>
+                        </Text>
+                     </children></AnchorPane>
+                  <AnchorPane maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label fx:id="Ingredients2" layoutX="6.0" layoutY="40.0" prefHeight="105.0" prefWidth="180.0" />
+                        <Text fill="#9a1818" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédients manquants pour la recette 2 :" wrappingWidth="130.7294921875">
+                           <font>
+                              <Font name="Ani" size="15.0" />
+                           </font>
+                        </Text>
+                     </children></AnchorPane>
+                  <AnchorPane maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="Ingredients3" layoutX="6.0" layoutY="40.0" prefHeight="105.0" prefWidth="180.0" />
+                        <Text fill="#9a1818" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédients manquant pour la recetet 3:" wrappingWidth="130.7294921875">
+                           <font>
+                              <Font name="Ani" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="Ingredients4" layoutX="6.0" layoutY="40.0" prefHeight="105.0" prefWidth="180.0" />
+                        <Text fill="#9a1818" layoutX="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédients manquant pour la recetet 4:" wrappingWidth="130.7294921875">
+                           <font>
+                              <Font name="Ani" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="Ingredients5" layoutX="6.0" layoutY="40.0" prefHeight="105.0" prefWidth="180.0" />
+                        <Text fill="#9a1818" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédients manquant pour la recette 5 :" wrappingWidth="130.7294921875">
+                           <font>
+                              <Font name="Ani" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="Ingredients6" layoutX="6.0" layoutY="40.0" prefHeight="105.0" prefWidth="180.0" />
+                        <Text fill="#9a1818" layoutX="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédients manquant pour la recette 6 :" wrappingWidth="130.7294921875">
+                           <font>
+                              <Font name="Ani" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="208.0" layoutY="410.0" maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.rowIndex="3">
+                     <children>
+                        <Label fx:id="Ingredients7" layoutX="6.0" layoutY="40.0" prefHeight="105.0" prefWidth="180.0" />
+                        <Text fill="#9a1818" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédients manquant pour la recette 7 :" wrappingWidth="130.7294921875">
+                           <font>
+                              <Font name="Ani" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="610.0" maxHeight="600" maxWidth="400" minHeight="194.0" minWidth="-Infinity" onMouseClicked="#SetGraphicContent" prefHeight="194.0" prefWidth="186.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label fx:id="Ingredients8" layoutX="6.0" layoutY="40.0" prefHeight="154.0" prefWidth="214.0" />
+                        <Text fill="#9a1818" layoutX="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédients manquant pour la recette 8 :" wrappingWidth="130.7294921875">
+                           <font>
+                              <Font name="Ani" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Button fx:id="Findfavorite1" layoutX="384.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#FavoriteFinder" prefHeight="30.0" prefWidth="35.0" style="-fx-background-color: transparent; l: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;" text="←">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
